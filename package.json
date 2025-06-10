@@ -1,5 +1,7 @@
 {
   "name": "bobsmith",
+  "author": "Bob Smith",
+  "description": "A personal card CLI tool",
   "version": "1.4.2",
   "type": "module",
   "main": "dist/card.js",
@@ -10,12 +12,16 @@
     "build": "tsc",
     "start": "node dist/card.js",
     "dev": "tsc && node dist/card.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "pnpm run build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cli",
+    "card",
+    "personal",
+    "business-card"
+  ],
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "boxen": "^8.0.1",
     "chalk": "^5.4.1",
