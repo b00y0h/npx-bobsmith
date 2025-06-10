@@ -2,7 +2,7 @@
   "name": "bobsmith",
   "author": "Bob Smith",
   "description": "A personal card CLI tool",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "type": "module",
   "main": "dist/card.js",
   "bin": {
