@@ -84,6 +84,10 @@ const actionHandlers: ActionHandlers = {
     spinner.success({ text: atlas("💻 GitHub profile opened!") });
     await animateText(chalk.green("Check out my latest projects!"));
   },
+
+  securityDemo: async (): Promise<void> => {
+    await SecurityAwarenessDemo();
+  },
 };
 
 // Helper function to get menu choices
@@ -96,6 +100,7 @@ const getMenuChoices = (): Array<{ name: string; value: string }> => {
       value: "scheduleMeeting",
     },
     { name: `💻  ${atlas("View GitHub")}`, value: "viewGitHub" },
+    { name: `🔒  ${chalk.red("Security Demo")}`, value: "securityDemo" },
     { name: instagram("🚪  Exit"), value: "quit" },
   ];
 
@@ -122,7 +127,14 @@ const menuOptions: InquirerQuestion[] = [
 // Main application
 const main = async (): Promise<void> => {
   try {
-    // await SecurityAwarenessDemo();
+    // Check for command line arguments
+    const args = process.argv.slice(2);
+    const showSecurityDemo = args.includes("-security");
+
+    if (showSecurityDemo) {
+      await SecurityAwarenessDemo();
+    }
+
     await WelcomeBanner();
     await ProfileCard();
 
