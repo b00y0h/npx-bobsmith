@@ -17,8 +17,11 @@ import openURL from "open";
 import { ActionHandlers, InquirerQuestion } from "./types.js";
 import { createAnimatedSpinner, animateText, sleep } from "./utils.js";
 import CONFIG from "./config.js";
-import { WelcomeBanner, ProfileCard } from "./components/index.js";
-import { SecurityAwarenessDemo } from "./components/SecurityAwarenessDemo.js";
+import {
+  WelcomeBanner,
+  ProfileCard,
+  SecurityAwarenessDemo,
+} from "./components/index.js";
 
 const actionHandlers: ActionHandlers = {
   email: async (): Promise<void> => {
