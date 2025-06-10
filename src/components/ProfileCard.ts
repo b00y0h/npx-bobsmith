@@ -77,7 +77,7 @@ export const ProfileCard = async (): Promise<void> => {
     margin: 1,
     borderStyle: "round",
     borderColor: CONFIG.THEME.BORDER_COLOR,
-    float: "center",
+    float: "left",
     backgroundColor: CONFIG.THEME.BG_COLOR,
     title: chalk.green.bold("Bob's Business Card"),
     titleAlignment: "center",

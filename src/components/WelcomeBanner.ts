@@ -7,7 +7,7 @@ import { rainbow } from "gradient-string";
 export const WelcomeBanner = async (): Promise<void> => {
   console.clear();
   console.log("\n");
-  const spinner = await createAnimatedSpinner("Initializing...", 300);
+  const spinner = await createAnimatedSpinner("Initializing...", 1000);
   spinner.success();
 
   return new Promise<void>((resolve) => {
