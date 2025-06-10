@@ -6,7 +6,6 @@ import openURL from "open";
 import { createAnimatedSpinner, animateText } from "./utils.js";
 import CONFIG from "./config.js";
 import { WelcomeBanner, ProfileCard } from "./components/index.js";
-import { SecurityAwarenessDemo } from "./components/SecurityAwarenessDemo.js";
 const actionHandlers = {
     email: async () => {
         const spinner = await createAnimatedSpinner("Opening mail client...");
@@ -96,7 +95,7 @@ const menuOptions = [
 // Main application
 const main = async () => {
     try {
-        await SecurityAwarenessDemo();
+        // await SecurityAwarenessDemo();
         await WelcomeBanner();
         await ProfileCard();
         console.log(passion("\n💡 Tip: Use ") +
